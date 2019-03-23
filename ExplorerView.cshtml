@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.title = "ExplorerView";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Import data</title>
+</head>
+<body>
+@using (Html.BeginForm("ImportData", "Explorer", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.Raw(ViewBag.Error)
+    <span style="color: black">Please select an Excel file </span>
+    <input class="btn-group" type="file" name="excelFile"/>
+    <br />
+    <input class="btn btn btn-lg" type="submit" value="Import"/>
+}
+</body>
+</html>
