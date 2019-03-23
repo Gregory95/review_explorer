@@ -1,0 +1,80 @@
+﻿body {
+    margin: 0;
+    background: #000080;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    overflow-y: scroll;
+}    
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+header {
+    background: black;
+}
+header:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav {
+    float: right;
+   
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+
+}
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 20px;
+    font-family: 'Asap', sans-serif;
+    font-size: 16px;
+    color: aqua;
+    position: relative;
+    }
+nav a {
+    color: aqua;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+nav a:hover {
+    color: blue;
+}
+
+nav a:before {
+    content: "";
+    display: block;
+    height: 5px;
+    background-color: aqua;
+
+    position: absolute;
+    top: 0;
+    width: 0;
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

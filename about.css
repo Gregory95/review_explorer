@@ -1,0 +1,39 @@
+﻿/*
+    about view css
+*/
+
+body {
+    margin: 0;
+}
+.title_1{
+    position: absolute;
+    left: 50px;
+    bottom: 450px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 32px;
+}
+.goal{
+    position: absolute;
+    left: 50px;
+    bottom: 250px;
+    font-family: Arial;
+    color: black;
+    font-size: 22px;
+}
+.title_2 {
+    position: absolute;
+    left: 850px;
+    bottom: 450px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 32px;
+}
+.start {
+    position: absolute;
+    left: 850px;
+    bottom: 250px;
+    font-family: Arial;
+    font-size: 22px;
+    color: black;
+}

@@ -1,0 +1,91 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Asap');
+@import url('https://fonts.googleapis.com/css?family=Sarabun');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/*this class contains all 3 panels */
+.panel {
+    width: calc(33.33% - (15px/1.5));
+    display: block;
+    float: left;
+    position: relative;
+    height: auto;
+    margin-right: 10px;
+}
+.panel:nth-of-type(3n) {
+        margin-right: 0;
+    }
+    /*Inner class contains whatever is inside a panel*/
+.panel .inner {
+    background: rgb(128, 128, 128);
+    margin: 15px;
+    padding: 15px;
+    height: calc(100% - 60px);
+    display: block;
+    position: relative;
+    }
+
+.panel .inner h2 {
+    margin-top: 0;
+    font-size: 22px;
+    font-family: 'Asap', sans-serif;
+    color: #fff;
+        }
+
+.panel .inner p {
+    font-size: 14px;
+    color: black;
+    font-family: 'Sarabun', sans-serif;
+        }
+#preview {
+    background-color: #F2F1F1;
+}
+
+#main {
+    background-color: #F2F1F1;
+}
+
+#relevant {
+    background-color: #F2F1F1;
+}
+.table td {
+    padding: 5px;
+    text-align: left;
+    border: 1px solid black;
+}
+.table th {
+    padding: 5px;
+    text-align: center;
+    font-family: 'Asap', sans-serif;
+    font-size: larger;
+}
+
+.read-more, clearPanel {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: pointer;
+    border: none;
+    padding: 6px;
+    font-size: 10px;
+    color: aqua;
+    font-family: cursive;
+    box-sizing: border-box;
+}
+.table {
+    border: solid black;
+    border-collapse: collapse;
+}
+
+.read-more-less .more-text {
+    display: none;
+}
+
+#selectedItem {
+    text-decoration: none;
+    text-align: left;
+    display: block;
+}
