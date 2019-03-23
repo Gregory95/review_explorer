@@ -1,0 +1,68 @@
+﻿
+@using Microsoft.Ajax.Utilities
+@using ReviewExplorer.Models
+@model ReviewExplorer.Models.ReviewData
+<!DOCTYPE html>
+<html>
+<head lang="eng">
+    <meta name="viewport" content="width=device-width"/>
+    <title>Read excel data</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/read-more-btn.js"></script>
+    <script src="~/Scripts/ReadDataView.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Content/readData.css"/>
+    <link rel="stylesheet" type="text/css" href="/Content/Site.css"/>
+</head>
+<body class="container">
+<div class="panel" id="preview">
+    <div class="inner">
+        <h2 align="center">Preview</h2>
+        <table class="table table-bordered table-responsive table-hover">
+            <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Text
+                </th>
+            </tr>
+            </thead>
+            @{
+                var count = 0;
+            }
+            <tbody>
+           
+            @foreach (var opinion in ViewBag.ListReviews)
+                //This loop add data in table`s cells
+            {
+                <tr>
+                    <td>
+                        @{
+                            count++;
+                        }
+                        <p style="color: black">@count</p>
+                    </td>
+                    <td class="read-more-less">
+                        @Html.DisplayFor(modelItem => opinion)
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+    <div class="panel" id="main">
+        <div class="inner">
+            <h2 align="center">Main</h2>
+                <p id="selectedItem"></p>
+        </div>
+    </div>
+<div class="panel" id="relevant">
+    <div class="inner">
+        <h2 align="center">Relevant</h2>
+    </div>
+</div>
+</body>
+</html>
