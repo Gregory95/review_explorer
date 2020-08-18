@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Content/NavBar.css" />
+</head>
+<body>
+<header>
+    <div class="navbar-collapse">
+        <div class="container">
+            @Html.ActionLink("ReviewExplorer", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <nav id="navbar">
+                <ul>
+                    <!----<li>@Html.ActionLink("Home", "Index", "Home")</li>-->
+                    <li>@Html.ActionLink("Explorer", "Explorer", "Home")</li>
+                    <li>@Html.ActionLink("Who we are", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact us", "Contact", "Home")</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-50px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+</header>
+</body>
+</html>
+
+                
